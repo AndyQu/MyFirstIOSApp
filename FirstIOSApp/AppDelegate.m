@@ -17,14 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    MainViewController *mainController=[[MainViewController alloc] init];
-    self.window.rootViewController=mainController;
-    
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    MainViewController *mainController=[[MainViewController alloc] init];
+//    self.window.rootViewController=mainController;
+//    
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
