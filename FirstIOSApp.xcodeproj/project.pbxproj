@@ -14,6 +14,7 @@
 		A11304F81C05E9EC00AB8898 /* FirstIOSAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11304F71C05E9EC00AB8898 /* FirstIOSAppTests.m */; };
 		A11305031C05E9EC00AB8898 /* FirstIOSAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11305021C05E9EC00AB8898 /* FirstIOSAppUITests.m */; };
 		A11305121C05EA2800AB8898 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11305111C05EA2700AB8898 /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A1DDEF811C144E3100C76C15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DDEF801C144E3100C76C15 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A11305041C05E9EC00AB8898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11305101C05EA2700AB8898 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A11305111C05EA2700AB8898 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A1DDEF801C144E3100C76C15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		A11304D71C05E9EB00AB8898 = {
 			isa = PBXGroup;
 			children = (
+				A1DDEF801C144E3100C76C15 /* Default-568h@2x.png */,
 				A11304E21C05E9EB00AB8898 /* FirstIOSApp */,
 				A11304F61C05E9EC00AB8898 /* FirstIOSAppTests */,
 				A11305011C05E9EC00AB8898 /* FirstIOSAppUITests */,
@@ -242,6 +245,7 @@
 			files = (
 				A11304EA1C05E9EB00AB8898 /* Assets.xcassets in Resources */,
 				A11304ED1C05E9EB00AB8898 /* LaunchScreen.storyboard in Resources */,
+				A1DDEF811C144E3100C76C15 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				A11305091C05E9EC00AB8898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A113050A1C05E9EC00AB8898 /* Build configuration list for PBXNativeTarget "FirstIOSAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				A113050C1C05E9EC00AB8898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A113050D1C05E9EC00AB8898 /* Build configuration list for PBXNativeTarget "FirstIOSAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				A113050F1C05E9EC00AB8898 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
