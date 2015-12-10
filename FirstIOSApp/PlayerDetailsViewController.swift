@@ -1,16 +1,25 @@
 //
-//  PlayersViewController.swift
+//  PlayerDetailsViewControllerTableViewController.swift
 //  FirstIOSApp
 //
-//  Created by andy on 15/12/6.
+//  Created by andy on 15/12/10.
 //  Copyright © 2015年 andy. All rights reserved.
 //
 
 import UIKit
 
-class PlayersViewController: UITableViewController {
+class PlayerDetailsViewController: UITableViewController {
     
-    var players:[Player] = playersData
+    @IBOutlet weak var nameTextField:UITextField!;
+    @IBOutlet weak var detailLabel:UILabel!;
+    
+    var player:Player?
+    
+    var game:String="chess"{
+        didSet{
+            detailLabel.text?=game
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,59 +36,45 @@ class PlayersViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
-        -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath) as! PlayerCell
-            
-            let player = players[indexPath.row] as Player
-            cell.player=player
-            
-            //            if let nameLable=cell.viewWithTag(100) as? UILabel{
-            //                nameLable.text=player.name
-            //            }
-            //            if let gameLable=cell.viewWithTag(101) as?UILabel{
-            //                gameLable.text=player.game
-            //            }
-            //            if let ratingImage=cell.viewWithTag(102) as? UIImageView{
-            //                ratingImage.image=self.imageForRating(player.rating)
-            //            }
-            //            cell.textLabel?.text = player.name
-            //            cell.detailTextLabel?.text = player.game
-            
-            return cell
-    }
-    
-    func imageForRating(rating:Int)->UIImage?{
-        let imageName="\(rating)Stars";
-        return UIImage(named: imageName)
-    }
-    
-    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
-        if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
-            
-            //add the new player to the players array
-            if let player = playerDetailsViewController.player {
-                players.append(player)
-                
-                //update the tableView
-                let indexPath = NSIndexPath(forRow: players.count-1, inSection: 0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SavePlayerDetail" {
+            player = Player(name: nameTextField.text!, game: game, rating: 1)
+        }else if segue.identifier == "PickGame" {
+            if let gamePickerViewController = segue.destinationViewController as? GamePickerViewController {
+                gamePickerViewController.selectedGame = game
             }
         }
     }
+    
+    @IBAction func unwindWithSelectedGame(segue:UIStoryboardSegue){
+        if let lastController = segue.sourceViewController as? GamePickerViewController{
+            game=lastController.selectedGame!
+        }
+    }
+    
+    // MARK: - Table view data source
+    
+    //    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    //        // #warning Incomplete implementation, return the number of sections
+    //        return 0
+    //    }
+    //
+    //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        // #warning Incomplete implementation, return the number of rows
+    //        return 0
+    //    }
+    
+    
+    
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    
+    // Configure the cell...
+    
+    return cell
+    }
+    */
     
     /*
     // Override to support conditional editing of the table view.
@@ -126,4 +121,12 @@ class PlayersViewController: UITableViewController {
     }
     */
     
+    required init?(coder aDecoder: NSCoder) {
+        print("init PlayerDetailsViewController")
+        super.init(coder: aDecoder)
+    }
+    
+    deinit {
+        print("deinit PlayerDetailsViewController")
+    }
 }

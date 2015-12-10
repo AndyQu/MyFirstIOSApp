@@ -14,6 +14,9 @@
 		A11304F81C05E9EC00AB8898 /* FirstIOSAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11304F71C05E9EC00AB8898 /* FirstIOSAppTests.m */; };
 		A11305031C05E9EC00AB8898 /* FirstIOSAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11305021C05E9EC00AB8898 /* FirstIOSAppUITests.m */; };
 		A11305121C05EA2800AB8898 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11305111C05EA2700AB8898 /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A1C40B661C1968000000D2A2 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C40B651C1968000000D2A2 /* PlayerCell.swift */; settings = {ASSET_TAGS = (); }; };
+		A1C40B681C19730B0000D2A2 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C40B671C19730B0000D2A2 /* PlayerDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A1C40B6A1C197F040000D2A2 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C40B691C197F040000D2A2 /* GamePickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A1DDEF811C144E3100C76C15 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1DDEF801C144E3100C76C15 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 		A1DDEFB21C1465A400C76C15 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDEFB11C1465A400C76C15 /* PlayersViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A1DDEFB41C1468D700C76C15 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DDEFB31C1468D700C76C15 /* Player.swift */; settings = {ASSET_TAGS = (); }; };
@@ -53,6 +56,9 @@
 		A11305041C05E9EC00AB8898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11305101C05EA2700AB8898 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A11305111C05EA2700AB8898 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A1C40B651C1968000000D2A2 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		A1C40B671C19730B0000D2A2 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		A1C40B691C197F040000D2A2 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
 		A1DDEF801C144E3100C76C15 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A1DDEFAE1C14651B00C76C15 /* FirstIOSApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstIOSApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		A1DDEFB11C1465A400C76C15 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 		A11304D71C05E9EB00AB8898 = {
 			isa = PBXGroup;
 			children = (
+				A1C40B651C1968000000D2A2 /* PlayerCell.swift */,
 				A1DDEFB11C1465A400C76C15 /* PlayersViewController.swift */,
 				A1DDEFB31C1468D700C76C15 /* Player.swift */,
 				A1DDEFB51C14691700C76C15 /* SampleData.swift */,
@@ -118,6 +125,8 @@
 				A11304E71C05E9EB00AB8898 /* AppDelegate.m */,
 				A11304E91C05E9EB00AB8898 /* Assets.xcassets */,
 				A11304EB1C05E9EB00AB8898 /* LaunchScreen.storyboard */,
+				A1C40B691C197F040000D2A2 /* GamePickerViewController.swift */,
+				A1C40B671C19730B0000D2A2 /* PlayerDetailsViewController.swift */,
 				A11304EE1C05E9EB00AB8898 /* Info.plist */,
 				A11304E31C05E9EB00AB8898 /* Supporting Files */,
 				A1DDEFAE1C14651B00C76C15 /* FirstIOSApp-Bridging-Header.h */,
@@ -282,12 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C40B681C19730B0000D2A2 /* PlayerDetailsViewController.swift in Sources */,
 				A11304E81C05E9EB00AB8898 /* AppDelegate.m in Sources */,
 				A1DDEFB61C14691700C76C15 /* SampleData.swift in Sources */,
+				A1C40B661C1968000000D2A2 /* PlayerCell.swift in Sources */,
 				A1DDEFB21C1465A400C76C15 /* PlayersViewController.swift in Sources */,
 				A11305121C05EA2800AB8898 /* MainViewController.m in Sources */,
 				A1DDEFB41C1468D700C76C15 /* Player.swift in Sources */,
 				A11304E51C05E9EB00AB8898 /* main.m in Sources */,
+				A1C40B6A1C197F040000D2A2 /* GamePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
